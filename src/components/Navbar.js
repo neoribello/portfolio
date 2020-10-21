@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import logo from "../assets/logo.svg"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
-import $ from "jquery"
 
 function Navbar({ toggleSidebar }) {
   const [navbar, setNavbar] = useState(false);
@@ -14,13 +13,10 @@ function Navbar({ toggleSidebar }) {
       setNavbar(false);
     }
   }
-
-  $('nav').filter(function(){
-    return this.href === window.location.href;
-  }).removeClass('active');
-
-
-  window.addEventListener('scroll', changeBackground)
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackground);
+  })
+    
   return (
     <nav className={navbar ? 'navbar active' : 'navbar'} >
       <div className="nav-center">
