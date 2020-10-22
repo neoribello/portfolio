@@ -5,10 +5,11 @@
  */
 
 module.exports = {
+  pathPrefix: "/neiloribello",
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
+    title: "Neil Oribello Portfolio",
+    description: "Vancouver based Front End Developer",
+    author: "Neil Oribello",
     twitterUsername: "@neiloribello",
     image: "/twitter-img.png",
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
