@@ -916,6 +916,17 @@ About Page
 ===============
 */
 
+.about-stack {
+  margin: 24px 0;
+}
+
+.resume {
+  background: var(--clr-primary-1);
+  padding: 15px;
+  color: white;
+  border-radius: 3px;
+}
+
 .about-page {
   padding: 7rem 0;
 }

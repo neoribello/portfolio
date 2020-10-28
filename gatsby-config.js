@@ -5,14 +5,14 @@
  */
 
 module.exports = {
-  pathPrefix: "/neiloribello",
+  pathPrefix: "/portfolio",
   siteMetadata: {
     title: "Neil Oribello Portfolio",
     description: "Vancouver based Front End Developer",
     author: "Neil Oribello",
     twitterUsername: "@neiloribello",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://github.com/neoribello/portfolio",
   },
   plugins: [
     `gatsby-transformer-sharp`,

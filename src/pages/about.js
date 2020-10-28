@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
-import SEO from "../components/SEO"
+import pdf from "../assets/NeilOribello_Resume_Oct26.pdf"
 const About = ({
   data: {
     about: { nodes },
@@ -24,6 +24,7 @@ const About = ({
                 return <span key={item.id}>{item.title}</span>
               })}
             </div>
+            <a href={pdf} target="_blank" className="resume">Click here for resume</a>
           </article>
         </div>
       </section>
