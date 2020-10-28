@@ -21,7 +21,7 @@ function Navbar({ toggleSidebar }) {
     <nav className={navbar ? 'navbar active' : 'navbar'} >
       <div className="nav-center">
         <div className="nav-header">
-          <a href="/"><span className="nav-logo">n.o</span></a>
+          <a href="/portfolio"><span className="nav-logo">n.o</span></a>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </button>
