@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
-import pdf from "../assets/Neil_Oribello_resume_Oct28.pdf"
+import pdf from "../assets/NeilOribello-Dec-Resume.pdf"
 const About = ({
   data: {
     about: { nodes },

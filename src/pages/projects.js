@@ -16,8 +16,7 @@ const ProjectsPage = ({
     </Layout>
   )
 }
-export const query = graphql
-`
+export const query = graphql`
   {
     allStrapiProjects {
       nodes {
@@ -28,7 +27,7 @@ export const query = graphql
         url
         image {
           childImageSharp {
-            fluid(maxWidth: 200, maxHeight: 200) {
+            fluid {
               ...GatsbyImageSharpFluid
             }
           }

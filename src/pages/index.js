@@ -11,7 +11,8 @@ export default ({data}) => {
     allStrapiProjects: { nodes: projects },
   } = data
 
-  return ( <Layout>
+  return ( 
+  <Layout>
     <Hero />
     <Services />
     <Jobs />

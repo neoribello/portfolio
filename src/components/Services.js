@@ -9,7 +9,7 @@ const Services = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  return <section className="section bg-grey">
+  return <section className="section container">
     <Title title="services"/>
     <div data-aos="slide-right" className="section-center services-center">
       {services.map((service)=> {

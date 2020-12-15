@@ -18,7 +18,7 @@ function Navbar({ toggleSidebar }) {
   })
     
   return (
-    <nav className={navbar ? 'navbar active' : 'navbar'} >
+    <nav className={navbar ? 'navbar active' : 'navbar'} container>
       <div className="nav-center">
         <div className="nav-header">
           <a href="/portfolio"><span className="nav-logo">n.o</span></a>

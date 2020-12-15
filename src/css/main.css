@@ -15,7 +15,7 @@ Variables
 :root {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
-  --clr-primary-1: #0F4C81;
+  --clr-primary-1: rgb(15, 76, 129);
   /* lighter shades of primary color */
   --clr-primary-6: rgb(110, 148, 204);
   --clr-primary-7: rgb(82, 209, 218);
@@ -28,9 +28,9 @@ Variables
   --clr-grey-4: rgb(72, 100, 127);
   /* grey used for paragraphs */
   --clr-grey-5: rgb(97, 125, 152);
-  --clr-grey-8: rgb(188, 204, 220);
+  --clr-grey-8: rgb(212, 212, 212);
   --clr-grey-9: rgb(218, 226, 236);
-  --clr-grey-10: rgb(241, 245, 248);
+  --clr-grey-10: rgb(245, 245, 245);
   --clr-green-dark: rgb(29, 149, 39);
   --clr-red-dark: hsl(0, 67%, 44%);
   --clr-red-light: #e66b6b;
@@ -104,6 +104,12 @@ p {
   color: var(--clr-grey-3);
 }
 
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -164,14 +170,14 @@ p {
 }
 
 .section-center {
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1280px;
 }
 
 @media screen and (min-width: 992px) {
   .section-center {
-    width: 95vw;
+    width: 100vw;
   }
 }
 
@@ -208,7 +214,7 @@ p {
 
 .social-link {
   font-size: 1.75rem;
-  color: var(--clr-white);
+  color: var(--clr-primary-1);
   transition: var(--transition);
 }
 
@@ -231,30 +237,29 @@ Navbar
   display: flex;
   align-items: center;
   z-index: 200;
-  background: var(--clr-primary-1);
-  transition: 0.2s ease-in-out;
-}
-
-.navbar.active {
   background: var(--clr-white);
+  transition: 0.2s ease-in-out;
   box-shadow: 3px 9px 13px -11px rgba(0, 0, 0, 0.1);
 }
 
-.nav-logo {
-  color: var(--clr-white);
-  font-size: 2rem;
-  font-weight: 700;
-  border-bottom: solid var(--clr-white) 2px;
+.navbar.active {
+  box-shadow: 3px 9px 13px -11px rgba(0, 0, 0, 0.5);
 }
 
-.navbar.active .nav-logo {
+.nav-logo {
   color: var(--clr-primary-1);
+  font-size: 2rem;
+  font-weight: 700;
   border-bottom: solid var(--clr-primary-1) 2px;
 }
 
+.navbar.active .nav-logo {
+  border-bottom: solid var(--clr-white) 2px;
+}
+
 .nav-center {
-  width: 90vw;
-  max-width: 1170px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -298,14 +303,11 @@ Navbar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--clr-white);
+    color: var(--clr-black);
     font-weight: 300;
     letter-spacing: var(--spacing);
     transition: var(--transition);
     padding: 0.5rem 0;
-  }
-  .navbar.active .nav-links a {
-    color: var(--clr-primary-5);
   }
   .nav-links a:hover {
     box-shadow: 0px 2px var(--clr-primary-5);
@@ -468,11 +470,24 @@ Hero
 
 .hero {
   margin-top: -5rem;
-  padding-top: 5rem;
   height: 60vh;
   background: var(--clr-primary-1);
   position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../assets/hero-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.hero:before {
+  content:""; 
+  background-color: rgba(15, 76, 129, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 
 .hero-center {
   height: 100%;
@@ -491,7 +506,18 @@ Hero
 }
 
 .hero-info {
-  color: var(--clr-white);
+  color: var(--clr-black);
+  background: var(--clr-white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: solid white 2px;
+  padding: 35px 50px 15px 10px;
+}
+
+.hero-info h4 {
+  width: 100%;
+  max-width: 250px;
 }
 
 .hero-icons {
@@ -530,7 +556,7 @@ Hero
     grid-column: 1 / span 8;
   }
   .hero h4 {
-    line-height: 1;
+    line-height: 1.50;
   }
 }
 
@@ -540,11 +566,11 @@ Services
 ===============
 */
 
+
 .service {
-  background: var(--clr-white);
+  background: var(--clr-grey-10);
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
-  border-radius: var(--radius);
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -552,6 +578,7 @@ Services
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--clr-primary-1);
 }
 
 .service-icon {
@@ -564,11 +591,13 @@ Services
   height: 0.12rem;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  background: var(--clr-primary-1);
 }
 
 .service p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  color: var(--clr-primary-1);
 }
 
 .service:hover {
@@ -605,6 +634,10 @@ Services
 Jobs
 ===============
 */
+
+.jobs {
+  background: var(--clr-grey-10);
+}
 
 .jobs-center {
   width: 80vw;
@@ -707,15 +740,42 @@ Projects
 ===============
 */
 
-.projects-center {
+.project-container {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.project-info {
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-info:nth-of-type(2) {
+  background:  rgba(15, 76, 129, 0.8);
+}
+
+
+
+.project-center {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
   grid-auto-rows: auto;
   grid-gap: 1rem;
 }
 
 .projects {
-  background: var(--clr-grey-10);
+  background: var(--clr-white);
 }
 
 .project {
@@ -745,12 +805,7 @@ Projects
   opacity: 0;
 }
 
-.project-info {
-  background: var(--clr-white);
-  padding: 1rem 2rem;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-}
+
 
 .project-number {
   display: inline-block;
@@ -763,6 +818,9 @@ Projects
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
 }
 
 .project-desc {
@@ -790,7 +848,7 @@ Projects
 }
 
 .project-icon {
-  color: var(--clr-primary-5);
+  color: var(--clr-white);
   font-size: 1.25rem;
   margin-right: 0.5rem;
   transition: var(--transition);
@@ -853,7 +911,7 @@ Footer
 
 .footer {
   height: 9rem;
-  background: var(--clr-white);
+  background: var(--clr-grey-10);
   text-align: center;
   display: grid;
   place-items: center;
